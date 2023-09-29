@@ -1,30 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/25 20:30:51 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/29 12:56:19 by sasano           ###   ########.fr       */
+/*   Created: 2023/09/20 12:52:35 by sasano            #+#    #+#             */
+/*   Updated: 2023/09/20 13:32:09 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	*ft_memset(void *dest, int c, size_t count)
 {
-	t_list *tmp;
+	int		i;
+	void	*tmp;
 
-	if (!lst || !new)
-		return ;
-	if (!(*lst))
-		*lst = new;
-	else
+	i = 0;
+	tmp = dest;
+	while (i < count)
 	{
-		tmp = *lst;
-		while (tmp->next)
-			tmp = tmp->next;
-		tmp->next = new;
+		*(char *)dest = c;
+		dest++;
+		i++;
 	}
+	return (tmp);
+}
+
+int	main(void)
+{
+	char	buf[20];
+
+	strcpy(buf, "ABCDEFGHIJK");
+	printf("%s\n", buf);
+	printf("%s\n", ft_memset(buf, '1', 3));
+	printf("%s\n", memset(buf, '2', 2));
+	return (0);
 }

@@ -1,30 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/25 20:30:51 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/29 12:56:19 by sasano           ###   ########.fr       */
+/*   Created: 2023/09/20 15:40:24 by sasano            #+#    #+#             */
+/*   Updated: 2023/09/20 15:46:28 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	*ft_memchr(void *buf, int c, size_t n)
 {
-	t_list *tmp;
+	int	i;
 
-	if (!lst || !new)
-		return ;
-	if (!(*lst))
-		*lst = new;
-	else
+	i = 0;
+	while (i < n)
 	{
-		tmp = *lst;
-		while (tmp->next)
-			tmp = tmp->next;
-		tmp->next = new;
+		if (*(char *)buf == c)
+			return (buf);
+		buf++;
+		i++;
 	}
+	return (0);
+}
+
+int	main(void)
+{
+	char	buf[20];
+
+	strcpy(buf, "123456789");
+	printf("%s\n", memchr(buf, '5', 3));
+	printf("%s\n", ft_memchr(buf, '5', 3));
+	return (0);
 }

@@ -1,30 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/25 20:30:51 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/29 12:56:19 by sasano           ###   ########.fr       */
+/*   Created: 2023/09/19 22:34:14 by sasano            #+#    #+#             */
+/*   Updated: 2023/09/21 18:26:59 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_lstadd_back(t_list **lst, t_list *new)
+int	ft_strlen(char *str)
 {
-	t_list *tmp;
+	int	i;
 
-	if (!lst || !new)
-		return ;
-	if (!(*lst))
-		*lst = new;
-	else
-	{
-		tmp = *lst;
-		while (tmp->next)
-			tmp = tmp->next;
-		tmp->next = new;
-	}
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }

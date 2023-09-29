@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/25 20:30:51 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/29 12:56:19 by sasano           ###   ########.fr       */
+/*   Created: 2023/09/20 13:15:23 by sasano            #+#    #+#             */
+/*   Updated: 2023/09/20 18:25:26 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_bzero(void *dest, size_t n)
 {
-	t_list *tmp;
+	while (n--)
+		*(char *)dest++ = 'a';
+}
 
-	if (!lst || !new)
-		return ;
-	if (!(*lst))
-		*lst = new;
-	else
-	{
-		tmp = *lst;
-		while (tmp->next)
-			tmp = tmp->next;
-		tmp->next = new;
-	}
+int	main(void)
+{
+	char	buf[20];
+
+	strcpy(buf, "ABCDEFGHIJK");
+	ft_bzero(buf + 5, 0);
+	bzero(buf, 0);
+	printf("%s\n", buf);
+	return (0);
 }

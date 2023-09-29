@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/25 20:30:51 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/29 12:56:19 by sasano           ###   ########.fr       */
+/*   Created: 2023/09/19 22:21:07 by sasano            #+#    #+#             */
+/*   Updated: 2023/09/19 22:23:02 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_lstadd_back(t_list **lst, t_list *new)
+int	ft_isascii(int c)
 {
-	t_list *tmp;
-
-	if (!lst || !new)
-		return ;
-	if (!(*lst))
-		*lst = new;
-	else
-	{
-		tmp = *lst;
-		while (tmp->next)
-			tmp = tmp->next;
-		tmp->next = new;
-	}
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }

@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/25 20:30:51 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/29 12:56:19 by sasano           ###   ########.fr       */
+/*   Created: 2023/09/20 14:55:32 by sasano            #+#    #+#             */
+/*   Updated: 2023/09/20 15:04:25 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+char	*ft_strchr(char *dest, int c)
 {
-	t_list *tmp;
-
-	if (!lst || !new)
-		return ;
-	if (!(*lst))
-		*lst = new;
-	else
+	while (*dest)
 	{
-		tmp = *lst;
-		while (tmp->next)
-			tmp = tmp->next;
-		tmp->next = new;
+		if (*dest == c)
+			return (dest);
+		dest++;
 	}
+	return (0);
+}
+
+int	main(void)
+{
+	char	buf[20];
+
+	strcpy(buf, "123456789");
+	printf("%s\n", ft_strchr(buf, 'a'));
+	printf("%s\n", strchr(buf, 'a'));
+	return (0);
 }

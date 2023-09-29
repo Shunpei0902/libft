@@ -1,29 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/25 20:16:50 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/29 12:57:24 by sasano           ###   ########.fr       */
+/*   Created: 2023/09/20 13:48:05 by sasano            #+#    #+#             */
+/*   Updated: 2023/09/22 21:35:29 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
-int	ft_lstsize(t_list *lst)
+void	*ft_memcpy(void *dest, void *src, size_t n)
 {
 	int		i;
-	t_list	*tmp;
+	void	*tmp;
 
-	if (!lst)
-		return (0);
-	tmp = lst->next;
-	while (tmp)
+	i = 0;
+	tmp = dest;
+	while (i < n)
 	{
+		*(char *)dest = *(char *)src;
+		dest++;
+		src++;
 		i++;
-		tmp = tmp->next;
 	}
-	return (i);
+	return (tmp);
+}
+
+int	main(void)
+{
+	char	buf[20];
+	char	buf2[20];
+
+	strcpy(buf, "ABCDEFGHIJK");
+	strcpy(buf2, "123456789");
+	printf("%s\n", ft_memcpy(buf + 3, buf, 5));
+	printf("%s\n", memcpy(buf + 3, buf, 5));
+	return (0);
 }

@@ -1,30 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/25 20:30:51 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/29 12:56:19 by sasano           ###   ########.fr       */
+/*   Created: 2023/09/20 15:06:04 by sasano            #+#    #+#             */
+/*   Updated: 2023/09/20 15:21:56 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+char	*ft_strrchr(char *dest, int c)
 {
-	t_list *tmp;
+	int		i;
+	char	*tmp;
 
-	if (!lst || !new)
-		return ;
-	if (!(*lst))
-		*lst = new;
-	else
+	i = 0;
+	tmp = dest;
+	while (*dest)
 	{
-		tmp = *lst;
-		while (tmp->next)
-			tmp = tmp->next;
-		tmp->next = new;
+		i++;
+		dest++;
 	}
+	while (i > 0)
+	{
+		if (tmp[i] == c)
+			return (dest);
+		dest--;
+		i--;
+	}
+	return (0);
+}
+
+int	main(void)
+{
+	char	buf[20];
+
+	strcpy(buf, "12345644789");
+	printf("%s\n", strrchr(buf, 'a'));
+	printf("%s\n", ft_strrchr(buf, 'a'));
+	return (0);
 }
