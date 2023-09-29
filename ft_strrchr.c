@@ -6,12 +6,11 @@
 /*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 15:06:04 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/20 15:21:56 by sasano           ###   ########.fr       */
+/*   Updated: 2023/09/29 16:07:29 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strrchr(char *dest, int c)
 {
@@ -25,7 +24,7 @@ char	*ft_strrchr(char *dest, int c)
 		i++;
 		dest++;
 	}
-	while (i > 0)
+	while (i >= 0)
 	{
 		if (tmp[i] == c)
 			return (dest);
@@ -39,8 +38,8 @@ int	main(void)
 {
 	char	buf[20];
 
-	strcpy(buf, "12345644789");
-	printf("%s\n", strrchr(buf, 'a'));
-	printf("%s\n", ft_strrchr(buf, 'a'));
+	strcpy(buf, "\0");
+	printf("%s\n", strrchr(buf, '\0'));
+	printf("%s\n", ft_strrchr(buf, '\0'));
 	return (0);
 }

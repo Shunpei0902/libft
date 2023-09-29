@@ -6,25 +6,28 @@
 /*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 15:29:21 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/20 15:37:29 by sasano           ###   ########.fr       */
+/*   Updated: 2023/09/29 18:08:24 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	unsigned int	i;
+	unsigned char	*us1;
+	unsigned char	*us2;
 
+	us1 = (unsigned char *)s1;
+	us2 = (unsigned char *)s2;
 	i = 0;
-	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
+	while ((us1[i] != '\0' || us2[i] != '\0') && i < n)
 	{
-		if (s1[i] > s2[i])
+		if (us1[i] > us2[i])
 		{
 			return (1);
 		}
-		else if (s1[i] < s2[i])
+		else if (us1[i] < us2[i])
 		{
 			return (-1);
 		}
@@ -32,10 +35,11 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	}
 	return (0);
 }
-
+/*
 int	main(void)
 {
 	printf("%d\n", ft_strncmp("ABC", "ABC", 3));
-	printf("%d", strncmp("ABC", "ABC", 3));
+	printf("%d\n", strncmp("ABC", "ABC", 3));
 	return (0);
 }
+ */

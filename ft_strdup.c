@@ -6,13 +6,11 @@
 /*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 20:11:28 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/20 20:13:21 by sasano           ###   ########.fr       */
+/*   Updated: 2023/09/29 13:41:27 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strdup(char *src)
 {
@@ -34,7 +32,7 @@ char	*ft_strdup(char *src)
 	*cpy = '\0';
 	return (p);
 }
-
+/*
 int	main(void)
 {
 	char	*str;
@@ -48,3 +46,4 @@ int	main(void)
 	printf("%s\n", src);
 	return (0);
 }
+ */

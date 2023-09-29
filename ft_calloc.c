@@ -6,12 +6,11 @@
 /*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 19:45:58 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/22 20:59:20 by sasano           ###   ########.fr       */
+/*   Updated: 2023/09/29 16:24:57 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_calloc(size_t n, size_t size)
 {
@@ -29,24 +28,24 @@ void	*ft_calloc(size_t n, size_t size)
 	}
 	return (ptr);
 }
-/*
+
 int	main(void)
 {
 	int	*x;
 	int	*y;
 	int	i;
 
-	x = calloc(20, sizeof(int));
-	y = ft_calloc(20, sizeof(int));
+	x = calloc(0, sizeof(int));
+	// y = ft_calloc(0, sizeof(int));
 	i = 0;
-	while (i < 20)
+	while (i < 1)
 	{
 		printf("%d", x[i]);
 		i++;
 	}
 	printf("\n");
 	i = 0;
-	while (i < 20)
+	while (i < 1)
 	{
 		printf("%d", y[i]);
 		i++;
@@ -54,4 +53,3 @@ int	main(void)
 	printf("\n");
 	return (0);
 }
- */

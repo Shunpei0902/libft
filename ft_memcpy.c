@@ -6,31 +6,27 @@
 /*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 13:48:05 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/22 21:35:29 by sasano           ###   ########.fr       */
+/*   Updated: 2023/09/29 14:22:02 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, void *src, size_t n)
 {
-	int		i;
 	void	*tmp;
 
-	i = 0;
 	tmp = dest;
-	while (i < n)
+	while (n--)
 	{
 		*(char *)dest = *(char *)src;
 		dest++;
 		src++;
-		i++;
 	}
 	return (tmp);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	char	buf[20];
 	char	buf2[20];
@@ -41,3 +37,4 @@ int	main(void)
 	printf("%s\n", memcpy(buf + 3, buf, 5));
 	return (0);
 }
+ */

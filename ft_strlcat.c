@@ -6,12 +6,11 @@
 /*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 22:36:38 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/19 22:36:41 by sasano           ###   ########.fr       */
+/*   Updated: 2023/09/29 16:19:01 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* #include <stdio.h>
-#include <string.h> */
+#include "libft.h"
 
 void	cat(char *dest, char *src, unsigned int size)
 {
@@ -54,7 +53,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 		return ((ini_size + j));
 	return (i + j);
 }
-/*
+
 int	main(void)
 {
 	char			dest[20];
@@ -63,15 +62,14 @@ int	main(void)
 	unsigned int	result1;
 	unsigned int	result2;
 
-	strcpy(dest, "");
-	strcpy(src, "ABCD");
-	x = 10;
+	strcpy(dest, "\0");
+	strcpy(src, "\0");
+	x = 0;
 	result1 = ft_strlcat(dest, src, x);
 	printf("%s: %u\n", dest, result1);
-	strcpy(dest, "");
-	strcpy(src, "ABCD");
+	strcpy(dest, "\0");
+	strcpy(src, "\0");
 	result2 = strlcat(dest, src, x);
 	printf("%s: %u\n", dest, result2);
 	return (0);
 }
- */

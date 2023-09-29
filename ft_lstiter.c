@@ -6,7 +6,7 @@
 /*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 21:55:45 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/29 12:56:23 by sasano           ###   ########.fr       */
+/*   Updated: 2023/09/29 13:33:59 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list *tmp;
+	t_list	*tmp;
 
 	tmp = lst;
 	if (!lst || !f)

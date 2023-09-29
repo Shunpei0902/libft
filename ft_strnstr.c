@@ -6,34 +6,32 @@
 /*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 16:45:05 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/20 18:42:08 by sasano           ###   ########.fr       */
+/*   Updated: 2023/09/29 19:58:43 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strnstr(char *dest, char *src, size_t n)
 {
 	int	i;
-	int	j;
+	int	tmp;
 
-	i = 0;
-	while (src[i] == 0)
-		i++;
-	if (src == 0)
+	if (*src == '\0')
 		return (dest);
-	while (n--)
+	while (n && *dest)
 	{
 		if (*dest == *src)
 		{
-			j = 0;
-			while (j < i && dest[j] == src[j])
-				j++;
-			if (i == j)
+			i = 0;
+			tmp = n;
+			while (src[i++] && dest[i] == src[i])
+				tmp--;
+			if (tmp >= 0 && !src[i])
 				return (dest);
 		}
 		dest++;
+		n--;
 	}
 	return (0);
 }
@@ -45,7 +43,7 @@ int	main(void)
 
 	strcpy(buf, "123456789");
 	strcpy(buf2, "4567");
-	printf("%s\n", strnstr(buf, "a", 3));
-	printf("%s\n", ft_strnstr(buf, "a", 3));
+	printf("%s\n", strnstr(buf, buf, 9));
+	printf("%s\n", ft_strnstr(buf, buf, 9));
 	return (0);
 }

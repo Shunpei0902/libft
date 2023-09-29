@@ -6,26 +6,25 @@
 /*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 15:52:26 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/20 16:40:08 by sasano           ###   ########.fr       */
+/*   Updated: 2023/09/29 15:47:21 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 int	ft_memcmp(void *s1, void *s2, size_t n)
 {
 	while (n)
 	{
-		if (*(char *)s1 != *(char *)s2)
-			return (*(char *)s1 - *(char *)s2);
+		if (*(unsigned char *)s1 != *(unsigned char *)s2)
+			return (*(unsigned char *)s1 - *(unsigned char *)s2);
 		s1++;
 		s2++;
 		n--;
 	}
 	return (0);
 }
-
+/*
 int	main(void)
 {
 	char	buf[20];
@@ -37,3 +36,4 @@ int	main(void)
 	printf("%d\n", ft_memcmp(buf, buf2, 4));
 	return (0);
 }
+ */
