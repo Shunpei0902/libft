@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
+/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:28:53 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/29 18:11:27 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/02 15:38:26 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,13 +45,13 @@ char	**str_split(char **dest, char const *s, char c, int len)
 	int	j;
 	int	strlen;
 
-	i = 0;
-	while (i++ < len)
+	i = -1;
+	while (++i < len)
 	{
 		while (*s == c || *s == 0)
 			s++;
 		strlen = countsetlen(s, c);
-		dest[i] = (char *)malloc(sizeof(char) * (len + 1));
+		dest[i] = (char *)malloc(sizeof(char) * (strlen + 1));
 		if (!dest[i])
 		{
 			while (i-- >= 0)
@@ -73,13 +73,15 @@ char	**ft_split(char const *s, char c)
 	int		len;
 	char	**dest;
 
+	if (!s || !c || c == '\0')
+		return (0);
 	len = countstr(s, c);
 	dest = (char **)malloc(sizeof(char *) * (len + 1));
 	if (!dest)
 		return (0);
 	return (str_split(dest, s, c, len));
 }
-/*
+/* 
 int	main(void)
 {
 	int		i;
@@ -95,8 +97,8 @@ int	main(void)
 		printf("Memory allocation error!\n");
 		return (1);
 	}
-	i = 0;
-	while (result[i++])
+	i = -1;
+	while (result[++i])
 	{
 		printf("%s\n", result[i]);
 		free(result[i]);

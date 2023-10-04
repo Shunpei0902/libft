@@ -3,23 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
+/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 14:55:32 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/29 13:40:52 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/02 21:01:17 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(char *dest, int c)
+char	*ft_strchr(char const *dest, int c)
 {
 	while (*dest)
 	{
 		if (*dest == c)
-			return (dest);
+			return ((char *)dest);
 		dest++;
 	}
+	if (*dest == 0 && c == 0)
+		return ((char *)dest);
 	return (0);
 }
 /*

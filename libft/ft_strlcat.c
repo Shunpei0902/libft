@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
+/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 22:36:38 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/29 18:11:41 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/02 20:37:12 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,19 +30,13 @@ void	cat(char *dest, char *src, unsigned int size)
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	char			*p;
 	unsigned int	i;
 	unsigned int	j;
 	unsigned int	ini_size;
 
-	i = 0;
-	j = 0;
+	i = ft_strlen(dest);
+	j = ft_strlen(src);
 	ini_size = size;
-	while (dest[i] != '\0')
-		i++;
-	while (src[j] != '\0')
-		j++;
-	p = dest;
 	while (*dest && size > 0)
 	{
 		dest++;

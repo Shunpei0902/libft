@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
+/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 19:45:58 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/29 13:28:25 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/03 18:47:35 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,11 @@
 void	*ft_calloc(size_t n, size_t size)
 {
 	void	*ptr;
-	void	*tmp;
 
 	ptr = malloc(n * size);
 	if (ptr == NULL)
 		return (NULL);
-	tmp = ptr;
-	while (--n)
-	{
-		*(char *)tmp = 0;
-		tmp++;
-	}
+	ft_bzero(ptr, n * size);
 	return (ptr);
 }
 /*

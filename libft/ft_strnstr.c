@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
+/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 16:45:05 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/29 19:59:42 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/02 21:11:34 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(char *dest, char *src, size_t n)
+char	*ft_strnstr(char const *dest, char const *src, size_t n)
 {
 	int	i;
 	int	tmp;
 
-	if (*src == '\0')
-		return (dest);
+	if (*src == '\0' || !src)
+		return ((char *)dest);
 	while (n && *dest)
 	{
 		if (*dest == *src)
@@ -28,7 +28,7 @@ char	*ft_strnstr(char *dest, char *src, size_t n)
 			while (src[i++] && dest[i] == src[i])
 				tmp--;
 			if (tmp >= 0 && !src[i])
-				return (dest);
+				return ((char *)dest);
 		}
 		dest++;
 		n--;

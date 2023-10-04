@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
+/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 13:48:05 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/29 18:21:34 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/02 20:11:35 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ void	*ft_memcpy(void *dest, void *src, size_t n)
 	void	*tmp;
 
 	tmp = dest;
-	if (!src)
-		return (NULL);
+	if (!n || dest == src)
+		return (dest);
 	while (n--)
 	{
-		*(char *)dest = *(char *)src;
+		*(unsigned char *)dest = *(unsigned char *)src;
 		dest++;
 		src++;
 	}

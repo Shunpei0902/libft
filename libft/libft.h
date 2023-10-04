@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
+/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 19:09:27 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/29 13:47:00 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/02 21:04:22 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_putstr_fd(char *s, int fd);
 char				**ft_split(char const *s, char c);
-char				*ft_strchr(char *dest, int c);
+char				*ft_strchr(char const *dest, int c);
 char				*ft_strdup(char *src);
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strjoin(char const *s1, char const *s2);
@@ -62,7 +62,7 @@ unsigned int		ft_strlcpy(char *dest, char *src, unsigned int size);
 int					ft_strlen(char *str);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int					ft_strncmp(char *s1, char *s2, unsigned int n);
-char				*ft_strnstr(char *dest, char *src, size_t n);
+char				*ft_strnstr(char const *dest, char const *src, size_t n);
 char				*ft_strrchr(char *dest, int c);
 char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
