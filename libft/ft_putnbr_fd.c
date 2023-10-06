@@ -6,7 +6,7 @@
 /*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 20:10:02 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/29 13:39:30 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/06 14:24:56 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	if (n < 0)
 	{
-		ft_putchar_fd('-', 1);
+		ft_putchar_fd('-', fd);
 		n *= -1;
 	}
 	if (n >= 10)
@@ -32,10 +32,9 @@ void	ft_putnbr_fd(int n, int fd)
 	else
 		ft_putchar_fd(n + '0', fd);
 }
-/*
-int	main(void)
+
+/* int	main(void)
 {
-	ft_putnbr_fd(-2147483648, 1);
+	ft_putnbr_fd(-42, 1);
 	return (0);
-}
- */
+} */

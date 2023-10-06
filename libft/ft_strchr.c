@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
+/*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 14:55:32 by sasano            #+#    #+#             */
-/*   Updated: 2023/10/02 21:01:17 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/06 15:12:00 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strchr(char const *dest, int c)
 {
 	while (*dest)
 	{
-		if (*dest == c)
+		if (*dest == (unsigned char)c)
 			return ((char *)dest);
 		dest++;
 	}

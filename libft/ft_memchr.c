@@ -6,7 +6,7 @@
 /*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 15:40:24 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/29 14:21:40 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/06 15:21:54 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memchr(void *buf, int c, size_t n)
 {
 	while (n--)
 	{
-		if (*(char *)buf == c)
+		if (*(unsigned char *)buf == (unsigned char)c)
 			return (buf);
 		buf++;
 	}

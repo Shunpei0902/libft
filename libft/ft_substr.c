@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
+/*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 13:29:07 by sasano            #+#    #+#             */
-/*   Updated: 2023/10/01 19:46:30 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/06 12:47:00 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 char	*overstart(void)
 {
 	char	*substr;
+
 	substr = (char *)malloc(sizeof(char) * 1);
 	if (!substr)
 		return (NULL);
@@ -24,8 +25,8 @@ char	*overstart(void)
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t i;
-	int	j;
+	size_t	i;
+	int		j;
 	char	*substr;
 
 	if (!s || !len)
@@ -45,5 +46,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[i] = '\0';
 	return (substr);
 }
-
-

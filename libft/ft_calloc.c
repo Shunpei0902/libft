@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
+/*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 19:45:58 by sasano            #+#    #+#             */
-/*   Updated: 2023/10/03 18:47:35 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/06 16:12:29 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_calloc(size_t n, size_t size)
 {
 	void	*ptr;
 
+	if (size && n > SIZE_MAX / size)
+		return (NULL);
 	ptr = malloc(n * size);
 	if (ptr == NULL)
 		return (NULL);

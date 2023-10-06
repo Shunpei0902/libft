@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
+/*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 16:45:05 by sasano            #+#    #+#             */
-/*   Updated: 2023/10/02 21:11:34 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/06 15:59:31 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,18 @@
 
 char	*ft_strnstr(char const *dest, char const *src, size_t n)
 {
-	int	i;
-	int	tmp;
+	size_t	i;
 
-	if (*src == '\0' || !src)
+	if (!src || !*src)
 		return ((char *)dest);
 	while (n && *dest)
 	{
 		if (*dest == *src)
 		{
 			i = 0;
-			tmp = n;
-			while (src[i++] && dest[i] == src[i])
-				tmp--;
-			if (tmp >= 0 && !src[i])
+			while (src[i] && dest[i] == src[i] && i < n)
+				i++;
+			if (!src[i])
 				return ((char *)dest);
 		}
 		dest++;
@@ -35,16 +33,15 @@ char	*ft_strnstr(char const *dest, char const *src, size_t n)
 	}
 	return (0);
 }
-/*
+/* 
 int	main(void)
 {
 	char	buf[20];
 	char	buf2[20];
 
-	strcpy(buf, "123456789");
-	strcpy(buf2, "4567");
-	printf("%s\n", strnstr(buf, buf, 9));
-	printf("%s\n", ft_strnstr(buf, buf, 9));
+	strcpy(buf, "aaabcabcd");
+	strcpy(buf2, "aabc");
+	printf("%s\n", strnstr(buf, buf, -1));
+	printf("%s\n", ft_strnstr(buf, buf, -1));
 	return (0);
-}
- */
+} */

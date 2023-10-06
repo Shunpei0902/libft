@@ -6,13 +6,13 @@
 /*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 22:34:14 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/29 13:43:42 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/06 13:17:04 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
 	int	i;
 

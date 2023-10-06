@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
+/*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 22:36:38 by sasano            #+#    #+#             */
-/*   Updated: 2023/10/02 20:37:12 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/06 13:19:51 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	cat(char *dest, char *src, unsigned int size)
+void	cat(char *dest, const char *src, unsigned int size)
 {
 	int	op;
 
@@ -28,7 +28,7 @@ void	cat(char *dest, char *src, unsigned int size)
 		*dest = '\0';
 }
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size)
 {
 	unsigned int	i;
 	unsigned int	j;

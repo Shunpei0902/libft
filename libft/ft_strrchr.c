@@ -6,7 +6,7 @@
 /*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 15:06:04 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/29 16:09:14 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/06 15:13:56 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strrchr(char *dest, int c)
 	}
 	while (i >= 0)
 	{
-		if (tmp[i] == c)
+		if (tmp[i] == (unsigned char)c)
 			return (dest);
 		dest--;
 		i--;
