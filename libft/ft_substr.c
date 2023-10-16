@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
+/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 13:29:07 by sasano            #+#    #+#             */
-/*   Updated: 2023/10/06 12:47:00 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/17 03:02:55 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,30 +19,44 @@ char	*overstart(void)
 	substr = (char *)malloc(sizeof(char) * 1);
 	if (!substr)
 		return (NULL);
-	substr[0] = 0;
+	substr[0] = '\0';
 	return (substr);
 }
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	int		j;
+	size_t	len_s;
 	char	*substr;
 
-	if (!s || !len)
+	if (!s)
 		return (0);
-	j = ft_strlen((char *)s) - (int)start;
-	if (j < 0)
+	len_s = ft_strlen((char *)s);
+	if (len_s < start || len == 0)
 		return (overstart());
+	if (len_s < len)
+		len = len_s;
 	substr = (char *)malloc(sizeof(char) * (len + 1));
 	if (!substr)
 		return (NULL);
 	i = 0;
-	while (i < len)
+	while (i < len && s[start + i])
 	{
-		substr[i] = *(s + start + i);
+		substr[i] = s[start + i];
 		i++;
 	}
 	substr[i] = '\0';
 	return (substr);
 }
+/*
+int	main(void)
+{
+	char	*s;
+	char	*substr;
+
+	s = "Hello World";
+	substr = ft_substr(s, 1, 1);
+	printf("%s\n", substr);
+	return (0);
+}
+ */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
+/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 16:45:05 by sasano            #+#    #+#             */
-/*   Updated: 2023/10/06 15:59:31 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/17 06:33:24 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strnstr(char const *dest, char const *src, size_t n)
 {
 	size_t	i;
 
-	if (!src || !*src)
+	if (!*src)
 		return ((char *)dest);
 	while (n && *dest)
 	{
@@ -33,7 +33,7 @@ char	*ft_strnstr(char const *dest, char const *src, size_t n)
 	}
 	return (0);
 }
-/* 
+/*
 int	main(void)
 {
 	char	buf[20];

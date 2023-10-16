@@ -6,7 +6,7 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:28:53 by sasano            #+#    #+#             */
-/*   Updated: 2023/10/02 15:38:26 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/16 21:55:24 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ char	**ft_split(char const *s, char c)
 	int		len;
 	char	**dest;
 
-	if (!s || !c || c == '\0')
+	if (!s)
 		return (0);
 	len = countstr(s, c);
 	dest = (char **)malloc(sizeof(char *) * (len + 1));
@@ -81,7 +81,7 @@ char	**ft_split(char const *s, char c)
 		return (0);
 	return (str_split(dest, s, c, len));
 }
-/* 
+/*
 int	main(void)
 {
 	int		i;

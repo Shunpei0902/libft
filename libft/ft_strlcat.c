@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
+/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 22:36:38 by sasano            #+#    #+#             */
-/*   Updated: 2023/10/06 13:19:51 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/17 07:07:56 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size)
 	unsigned int	j;
 	unsigned int	ini_size;
 
+	if (size == 0 && src)
+		return (ft_strlen(src));
 	i = ft_strlen(dest);
 	j = ft_strlen(src);
 	ini_size = size;
@@ -47,7 +49,7 @@ unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size)
 		return ((ini_size + j));
 	return (i + j);
 }
-/*
+
 int	main(void)
 {
 	char			dest[20];
@@ -56,15 +58,14 @@ int	main(void)
 	unsigned int	result1;
 	unsigned int	result2;
 
-	strcpy(dest, "");
-	strcpy(src, "ABCD");
-	x = 10;
+	strcpy(dest, "123456");
+	strcpy(src, "1234");
+	x = 0;
 	result1 = ft_strlcat(dest, src, x);
 	printf("%s: %u\n", dest, result1);
-	strcpy(dest, "");
-	strcpy(src, "ABCD");
+	strcpy(dest, "123456");
+	strcpy(src, "1234");
 	result2 = strlcat(dest, src, x);
 	printf("%s: %u\n", dest, result2);
 	return (0);
 }
- */
