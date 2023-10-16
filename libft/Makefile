@@ -4,7 +4,7 @@ BONUS = ft_lstnew.c ./ft_lstadd_front.c ./ft_lstsize.c ./ft_lstlast.c ./ft_lstad
 OBJS = $(SRCS:.c=.o)
 BOJS = $(BONUS:.c=.o)
 CC = cc
-CFLAG = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 ifdef WITH_BONUS
 	OBJS += $(BOJS)
 endif
@@ -13,12 +13,12 @@ $(NAME): $(OBJS)
 		ar rc $(NAME) $(OBJS)
 
 %.o: %.c
-		$(CC) $(CFLAG) -c $< -o $@ 
+		$(CC) $(CFLAGS) -c $< -o $@ 
 
 all:	$(NAME)
 
 bonus:
-		make WITH_BONUS=1
+		$(MAKE) WITH_BONUS=1 all
 
 clean:
 		rm -f $(OBJS) $(BOJS)
@@ -27,3 +27,5 @@ fclean:	clean
 		rm -f $(NAME)
 
 re:	fclean all
+
+.PHONY: all clean fclean re bonus
