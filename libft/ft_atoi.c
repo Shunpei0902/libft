@@ -6,25 +6,11 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 19:28:13 by sasano            #+#    #+#             */
-/*   Updated: 2023/10/17 06:23:48 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/19 16:15:22 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen_nbr(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		if (str[i + 1] < '0' || str[i + 1] > '9')
-			return (i + 1);
-		i++;
-	}
-	return (i);
-}
 
 long	ft_long(const char *str, int abs)
 {
