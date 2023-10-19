@@ -5,9 +5,6 @@ OBJS = $(SRCS:.c=.o)
 BOJS = $(BONUS:.c=.o)
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-ifdef WITH_BONUS
-	OBJS += $(BOJS)
-endif
 
 $(NAME): $(OBJS)
 		ar rc $(NAME) $(OBJS)
@@ -17,8 +14,8 @@ $(NAME): $(OBJS)
 
 all:	$(NAME)
 
-bonus:
-		$(MAKE) WITH_BONUS=1 all
+bonus: $(OBJS) $(BOJS)
+		ar rc $(NAME) $(OBJS) $(BOJS)
 
 clean:
 		rm -f $(OBJS) $(BOJS)
