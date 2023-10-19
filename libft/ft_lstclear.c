@@ -6,7 +6,7 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 21:27:43 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/30 15:29:04 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/19 22:43:10 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		*lst = (*lst)->next;
 		ft_lstdelone(tmp, del);
 	}
+	lst = NULL;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
+/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 15:06:04 by sasano            #+#    #+#             */
-/*   Updated: 2023/10/06 15:13:56 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/19 22:45:26 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 char	*ft_strrchr(char *dest, int c)
 {
-	int		i;
-	char	*tmp;
+	int	i;
 
 	i = 0;
-	tmp = dest;
 	while (*dest)
 	{
 		i++;
@@ -26,7 +24,7 @@ char	*ft_strrchr(char *dest, int c)
 	}
 	while (i >= 0)
 	{
-		if (tmp[i] == (unsigned char)c)
+		if (*dest == (unsigned char)c)
 			return (dest);
 		dest--;
 		i--;

@@ -6,7 +6,7 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 13:29:07 by sasano            #+#    #+#             */
-/*   Updated: 2023/10/17 03:02:55 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/19 22:37:16 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	len_s = ft_strlen((char *)s);
 	if (len_s < start || len == 0)
 		return (overstart());
-	if (len_s < len)
-		len = len_s;
+	if (len_s < len + start)
+		len = len_s - start;
 	substr = (char *)malloc(sizeof(char) * (len + 1));
 	if (!substr)
 		return (NULL);

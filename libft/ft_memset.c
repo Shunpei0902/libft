@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
+/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 12:52:35 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/29 14:22:29 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/19 22:43:42 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memset(void *dest, int c, size_t count)
 	tmp = dest;
 	while (count--)
 	{
-		*(char *)dest = c;
+		*(unsigned char *)dest = (unsigned char)c;
 		dest++;
 	}
 	return (tmp);

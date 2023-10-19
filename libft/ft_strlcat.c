@@ -6,7 +6,7 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 22:36:38 by sasano            #+#    #+#             */
-/*   Updated: 2023/10/17 07:07:56 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/19 22:38:21 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size)
 		return ((ini_size + j));
 	return (i + j);
 }
-
+/*
 int	main(void)
 {
 	char			dest[20];
@@ -68,4 +68,4 @@ int	main(void)
 	result2 = strlcat(dest, src, x);
 	printf("%s: %u\n", dest, result2);
 	return (0);
-}
+} */
