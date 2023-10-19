@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
+/*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 20:07:32 by sasano            #+#    #+#             */
-/*   Updated: 2023/10/01 17:40:39 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/19 23:22:48 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int i;
+	int				i;
 	unsigned int	len;
 	char			*str;
 
@@ -28,7 +28,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	while (len-- > 0)
 	{
 		str[i] = f(i, s[i]);
-		i++;	
+		i++;
 	}
 	str[i] = 0;
 	return (str);
