@@ -6,13 +6,13 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 15:06:04 by sasano            #+#    #+#             */
-/*   Updated: 2023/10/19 22:45:26 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/26 21:48:24 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(char *dest, int c)
+char	*ft_strrchr(char const *dest, int c)
 {
 	int	i;
 
@@ -24,8 +24,8 @@ char	*ft_strrchr(char *dest, int c)
 	}
 	while (i >= 0)
 	{
-		if (*dest == (unsigned char)c)
-			return (dest);
+		if (*(char *)dest == (unsigned char)c)
+			return ((char *)dest);
 		dest--;
 		i--;
 	}

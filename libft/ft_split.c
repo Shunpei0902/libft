@@ -6,13 +6,13 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:28:53 by sasano            #+#    #+#             */
-/*   Updated: 2023/10/16 21:55:24 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/26 21:21:12 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	countsetlen(char const *s, char c)
+static int	countsetlen(char const *s, char c)
 {
 	int	i;
 
@@ -25,7 +25,7 @@ int	countsetlen(char const *s, char c)
 	return (i);
 }
 
-int	countstr(char const *s, char c)
+static int	countstr(char const *s, char c)
 {
 	int	i;
 
@@ -39,7 +39,7 @@ int	countstr(char const *s, char c)
 	return (i);
 }
 
-char	**str_split(char **dest, char const *s, char c, int len)
+static char	**str_split(char **dest, char const *s, char c, int len)
 {
 	int	i;
 	int	j;

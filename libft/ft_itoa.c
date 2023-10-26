@@ -6,13 +6,13 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 18:48:32 by sasano            #+#    #+#             */
-/*   Updated: 2023/10/01 17:44:04 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/26 21:20:26 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	numlen(int n)
+static int	numlen(int n)
 {
 	int	len;
 

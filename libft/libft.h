@@ -6,7 +6,7 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 19:09:27 by sasano            #+#    #+#             */
-/*   Updated: 2023/10/17 01:15:49 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/26 21:47:39 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
 t_list				*ft_lstnew(void *content);
 int					ft_lstsize(t_list *lst);
-void				*ft_memchr(void *buf, int c, size_t n);
-int					ft_memcmp(void *s1, void *s2, size_t n);
+void				*ft_memchr(void const *buf, int c, size_t n);
+int					ft_memcmp(void const *s1, void const *s2, size_t n);
 void				*ft_memcpy(void *dest, void const *src, size_t n);
 void				*ft_memmove(void *dest, void *src, size_t n);
 void				*ft_memset(void *dest, int c, size_t count);
@@ -54,16 +54,16 @@ void				ft_putnbr_fd(int n, int fd);
 void				ft_putstr_fd(char *s, int fd);
 char				**ft_split(char const *s, char c);
 char				*ft_strchr(char const *dest, int c);
-char				*ft_strdup(char *src);
+char				*ft_strdup(char const *src);
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strjoin(char const *s1, char const *s2);
 unsigned int		ft_strlcat(char *dest, const char *src, unsigned int size);
 unsigned int		ft_strlcpy(char *dest, const char *src, unsigned int size);
-int					ft_strlen(const char *str);
+unsigned int		ft_strlen(const char *str);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int					ft_strncmp(const char *s1, const char *s2, unsigned int n);
 char				*ft_strnstr(char const *dest, char const *src, size_t n);
-char				*ft_strrchr(char *dest, int c);
+char				*ft_strrchr(char const *dest, int c);
 char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 int					ft_tolower(int c);

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
+/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 15:52:26 by sasano            #+#    #+#             */
-/*   Updated: 2023/09/29 15:52:12 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/26 21:42:45 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(void *s1, void *s2, size_t n)
+int	ft_memcmp(void const *s1, void const *s2, size_t n)
 {
 	while (n)
 	{

@@ -6,13 +6,13 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 22:36:38 by sasano            #+#    #+#             */
-/*   Updated: 2023/10/19 22:38:21 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/26 21:21:32 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	cat(char *dest, const char *src, unsigned int size)
+static void	cat(char *dest, const char *src, unsigned int size)
 {
 	int	op;
 

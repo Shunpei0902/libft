@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
+/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 15:40:24 by sasano            #+#    #+#             */
-/*   Updated: 2023/10/06 15:21:54 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/26 21:46:04 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(void *buf, int c, size_t n)
+void	*ft_memchr(void const *buf, int c, size_t n)
 {
 	while (n--)
 	{
 		if (*(unsigned char *)buf == (unsigned char)c)
-			return (buf);
+			return ((unsigned char *)buf);
 		buf++;
 	}
 	return (0);
