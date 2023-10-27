@@ -6,7 +6,7 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 13:44:57 by sasano            #+#    #+#             */
-/*   Updated: 2023/10/28 06:07:37 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/28 06:12:56 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
-	char	*start;
 	int		len;
+	int		i;
 
 	if (!s1)
 		return (ft_strdup(s2));
@@ -26,19 +26,17 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
-	start = str;
+	i = 0;
 	while (*s1)
 	{
-		*str = *s1;
-		str++;
+		str[i++] = *s1;
 		s1++;
 	}
 	while (*s2)
 	{
-		*str = *s2;
-		str++;
+		str[i++] = *s2;
 		s2++;
 	}
-	*str = 0;
-	return (start);
+	str[i] = 0;
+	return (str);
 }
