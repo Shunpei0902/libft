@@ -6,7 +6,7 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 20:22:27 by sasano            #+#    #+#             */
-/*   Updated: 2023/10/19 22:46:51 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/29 13:57:28 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (!s || !fd)
+	if (!s)
 		return ;
 	write(fd, s, ft_strlen(s));
 }

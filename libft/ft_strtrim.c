@@ -6,13 +6,13 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 14:03:49 by sasano            #+#    #+#             */
-/*   Updated: 2023/10/17 02:12:22 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/29 14:00:49 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strsetlen(char *s1, char *set)
+static int	ft_strsetlen(char *s1, char *set)
 {
 	int		len;
 	char	*start;

@@ -6,7 +6,7 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 14:55:32 by sasano            #+#    #+#             */
-/*   Updated: 2023/10/26 21:56:24 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/29 13:58:10 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strchr(char const *dest, int c)
 {
 	while (*dest)
 	{
-		if (*dest == (unsigned char)c)
+		if (*dest == (char)c)
 			return ((char *)dest);
 		dest++;
 	}

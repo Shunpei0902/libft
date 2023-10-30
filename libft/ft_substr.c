@@ -6,13 +6,13 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 13:29:07 by sasano            #+#    #+#             */
-/*   Updated: 2023/10/19 22:37:16 by sasano           ###   ########.fr       */
+/*   Updated: 2023/10/29 14:01:00 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*overstart(void)
+static char	*overstart(void)
 {
 	char	*substr;
 
