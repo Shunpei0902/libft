@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
+/*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 22:34:14 by sasano            #+#    #+#             */
-/*   Updated: 2023/10/26 21:47:08 by sasano           ###   ########.fr       */
+/*   Updated: 2023/11/10 01:21:09 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlen(char const *str)
+size_t	ft_strlen(char const *str)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i] != '\0')

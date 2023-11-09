@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
+/*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 19:09:27 by sasano            #+#    #+#             */
-/*   Updated: 2023/10/26 21:47:39 by sasano           ###   ########.fr       */
+/*   Updated: 2023/11/10 01:17:53 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,9 +57,9 @@ char				*ft_strchr(char const *dest, int c);
 char				*ft_strdup(char const *src);
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strjoin(char const *s1, char const *s2);
-unsigned int		ft_strlcat(char *dest, const char *src, unsigned int size);
-unsigned int		ft_strlcpy(char *dest, const char *src, unsigned int size);
-unsigned int		ft_strlen(const char *str);
+size_t				ft_strlcat(char *dest, const char *src, size_t size);
+size_t				ft_strlcpy(char *dest, const char *src, size_t size);
+size_t				ft_strlen(const char *str);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int					ft_strncmp(const char *s1, const char *s2, unsigned int n);
 char				*ft_strnstr(char const *dest, char const *src, size_t n);
